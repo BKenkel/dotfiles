@@ -1,7 +1,5 @@
 
-MINICOM=' -c on'
-export MINICOM
-
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias gsync="git submodule sync --recursive && git submodule update --init --recursive"
 
 # Add an "alert" alias for long running commands.  Use like so:
