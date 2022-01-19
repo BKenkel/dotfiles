@@ -1,0 +1,6 @@
+
+### vscode ###
+**/.vscode/*
+
+### local_repos.patch ###
+**/*.patch
