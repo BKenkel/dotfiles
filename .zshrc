@@ -125,7 +125,7 @@ unsetopt SHARE_HISTORY
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Environment Variables
-export PATH="/$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Edit output format for 'time'
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'

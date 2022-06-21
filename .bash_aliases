@@ -1,6 +1,7 @@
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias gsync="git submodule sync --recursive && git submodule update --init --recursive"
+alias cal="ncal -bw"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
