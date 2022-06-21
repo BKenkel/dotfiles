@@ -63,6 +63,7 @@ highlight GitGutterDelete ctermfg=red
 " Enable powerline symbols
 let g:airline_powerline_fonts = 1
 
+let g:airline#extensions#tabline#enabled = 1
 
 " Far right section - line:col percentage%
 let g:airline_section_z = "%l:%c %3p%%"
