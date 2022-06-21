@@ -4,3 +4,7 @@
 
 ### local_repos.patch ###
 **/*.patch
+
+### sourcery config files ###
+**/.sourcery.yaml
+
