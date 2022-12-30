@@ -29,17 +29,28 @@ data.location=~/.task
 #include /usr/share/taskwarrior/solarized-light-256.theme
 #include /usr/share/taskwarrior/no-color.theme
 
-uda.priority.values=H,M,,L
-urgency.uda.priority.L.coefficient=0.0
-urgency.uda.priority.M.coefficient=3.9
+uda.priority.values=H,M,,L,B
 urgency.uda.priority.H.coefficient=6.0
+urgency.uda.priority.M.coefficient=3.9
 urgency.uda.priority..coefficient=1.5
-report.list.sort=project+\/,ticket+,priority-,depends+
-report.list.labels=ID,Active,Age,D,P,Project,Ticket,Name,Tags,R,Sch,Due,Until,Description
-report.list.columns=id,start.age,entry.age,depends.indicator,priority,project,ticket,ticketname,tags,recur.indicator,scheduled.countdown,due,until.remaining,description.count
+urgency.uda.priority.L.coefficient=0.0
+urgency.uda.priority.B.coefficient=-1
+color.uda.priority.B=color240
+
 uda.ticket.type=string
 uda.ticket.label=Ticket
 uda.ticketname.type=string
 uda.ticketname.label=Ticket Name
+
+# Sorted by project, then ticket
+report.list.sort=project+\/,ticket-,priority-,depends+
+report.list.labels=ID,Active,Age,D,P,Project,Ticket,Name,Tags,R,Sch,Due,Until,Description
+report.list.columns=id,start.age,entry.age,depends.indicator,priority,project,ticket,ticketname,tags,recur.indicator,scheduled.countdown,due,until.remaining,description.count
+
+# Default: sorted by urgency
 report.next.labels=ID,Active,Age,Deps,P,Project,Ticket,Name,Tag,Recur,S,Due,Until,Description
 report.next.columns=id,start.age,entry.age,depends,priority,project,ticket,ticketname,tags,recur,scheduled.countdown,due.relative,until.remaining,description
+
+report.waiting.labels=ID,A,Age,D,P,Project,Ticket,Name,Tags,R,Wait,Remaining,Sched,Due,Until,Description
+report.waiting.columns=id,start.active,entry.age,depends.indicator,priority,project,ticket,ticketname,tags,recur.indicator,wait,wait.remaining,scheduled,due,until,description
+report.list.filter=(status:pending or status:waiting)

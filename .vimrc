@@ -86,6 +86,9 @@ set number
 " Apply indentation from current line to new line
 set autoindent
 
+" Set tab width
+set tabstop=4
+
 " Highlight matching brace
 set showmatch
 
@@ -114,6 +117,11 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 " --- Key Mappings ------------------------------------------------- {{{
 
 map <F5> :NERDTreeToggle<CR>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " --- }}}
 
